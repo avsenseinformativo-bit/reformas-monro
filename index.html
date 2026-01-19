@@ -19,6 +19,8 @@
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
     </style>
+    <!-- AOS Animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script>
         tailwind.config = {
             theme: {
@@ -69,15 +71,16 @@
         </div>
 
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center sm:text-left">
-            <h1 class="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl">
+            <h1 class="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl" data-aos="fade-up">
                 <span class="block">Transformamos tu hogar</span>
                 <span class="block text-orange-500">en una obra de arte.</span>
             </h1>
-            <p class="mt-3 text-base text-gray-300 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-0 md:mt-5 md:text-xl">
+            <p class="mt-3 text-base text-gray-300 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-0 md:mt-5 md:text-xl"
+                data-aos="fade-up" data-aos-delay="200">
                 Especialistas en reformas integrales de alta calidad en Madrid. Construcciones Monro garantiza acabados
                 perfectos, plazos cumplidos y limpieza absoluta.
             </p>
-            <div class="mt-8 sm:mt-10 sm:flex sm:justify-start gap-4">
+            <div class="mt-8 sm:mt-10 sm:flex sm:justify-start gap-4" data-aos="fade-up" data-aos-delay="400">
                 <div class="rounded-md shadow">
                     <a href="tel:681 91 52 99"
                         class="w-full flex items-center justify-center px-8 py-4 border border-transparent text-xl font-medium rounded-md text-white bg-orange-600 hover:bg-orange-700 md:py-4 md:text-xl md:px-10">
@@ -97,7 +100,7 @@
     <!-- Section 1: Sobre Nosotros (New) -->
     <section class="py-20 bg-white" id="about">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="lg:text-center">
+            <div class="lg:text-center" data-aos="fade-up">
                 <h2 class="text-base text-orange-600 font-semibold tracking-wide uppercase">Nuestra Historia</h2>
                 <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
                     Excelencia en Construcción
@@ -114,44 +117,50 @@
     <!-- Section 2: Servicios Destacados (New) -->
     <section class="py-16 bg-gray-50" id="services">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
+            <div class="text-center mb-12" data-aos="fade-up">
                 <h2 class="text-3xl font-extrabold text-gray-900">Nuestros Servicios</h2>
                 <p class="mt-4 text-lg text-gray-500">Soluciones integrales para cada necesidad.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Service 1 -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+                    data-aos="fade-up" data-aos-delay="100">
                     <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                         alt="Reformas Integrales" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-gray-900 mb-2">Reformas Integrales</h3>
                         <p class="text-gray-600 mb-4">Renovación completa de viviendas y locales, gestionando cada
                             detalle desde el diseño hasta la entrega.</p>
-                        <a href="coming-soon-construcciones_monro.html" class="text-orange-600 font-medium hover:text-orange-700">Leer más
+                        <a href="coming-soon-construcciones_monro.html"
+                            class="text-orange-600 font-medium hover:text-orange-700">Leer más
                             &rarr;</a>
                     </div>
                 </div>
                 <!-- Service 2 -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+                    data-aos="fade-up" data-aos-delay="200">
                     <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                         alt="Cocinas de Diseño" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-gray-900 mb-2">Cocinas de Diseño</h3>
                         <p class="text-gray-600 mb-4">Creamos el corazón de tu hogar. Cocinas funcionales, modernas y
                             adaptadas a tu estilo de vida.</p>
-                        <a href="coming-soon-construcciones_monro.html" class="text-orange-600 font-medium hover:text-orange-700">Leer más
+                        <a href="coming-soon-construcciones_monro.html"
+                            class="text-orange-600 font-medium hover:text-orange-700">Leer más
                             &rarr;</a>
                     </div>
                 </div>
                 <!-- Service 3 -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+                    data-aos="fade-up" data-aos-delay="300">
                     <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                         alt="Baños Modernos" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-gray-900 mb-2">Baños Modernos</h3>
                         <p class="text-gray-600 mb-4">Transformamos tu baño en un spa personal. Materiales de primera y
                             acabados impecables.</p>
-                        <a href="coming-soon-construcciones_monro.html" class="text-orange-600 font-medium hover:text-orange-700">Leer más
+                        <a href="coming-soon-construcciones_monro.html"
+                            class="text-orange-600 font-medium hover:text-orange-700">Leer más
                             &rarr;</a>
                     </div>
                 </div>
@@ -162,12 +171,12 @@
     <!-- Content Section: Trust/Features (Existing) -->
     <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
+            <div class="text-center" data-aos="fade-up">
                 <h2 class="text-3xl font-extrabold text-gray-900">¿Por qué elegirnos?</h2>
             </div>
             <div class="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-3">
                 <!-- Feature 1 -->
-                <div class="pt-6">
+                <div class="pt-6" data-aos="fade-up" data-aos-delay="100">
                     <div class="flow-root bg-gray-50 rounded-lg px-6 pb-8 h-full">
                         <div class="-mt-6">
                             <div class="inline-flex items-center justify-center p-3 bg-orange-500 rounded-md shadow-lg">
@@ -183,7 +192,7 @@
                     </div>
                 </div>
                 <!-- Feature 2 -->
-                <div class="pt-6">
+                <div class="pt-6" data-aos="fade-up" data-aos-delay="200">
                     <div class="flow-root bg-gray-50 rounded-lg px-6 pb-8 h-full">
                         <div class="-mt-6">
                             <div class="inline-flex items-center justify-center p-3 bg-orange-500 rounded-md shadow-lg">
@@ -199,7 +208,7 @@
                     </div>
                 </div>
                 <!-- Feature 3 -->
-                <div class="pt-6">
+                <div class="pt-6" data-aos="fade-up" data-aos-delay="300">
                     <div class="flow-root bg-gray-50 rounded-lg px-6 pb-8 h-full">
                         <div class="-mt-6">
                             <div class="inline-flex items-center justify-center p-3 bg-orange-500 rounded-md shadow-lg">
@@ -220,7 +229,7 @@
     </section>
 
     <!-- Section 4: Contacto (New) -->
-    <section class="py-20 bg-gray-900 text-white" id="contact">
+    <section class="py-20 bg-gray-900 text-white" id="contact" data-aos="fade-up">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-3xl font-extrabold mb-8">¿Hablamos de tu proyecto?</h2>
             <p class="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
@@ -254,6 +263,14 @@
         </div>
     </footer>
 
+    <!-- AOS Library -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+        });
+    </script>
 </body>
 
 </html>
