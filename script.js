@@ -125,4 +125,47 @@ document.addEventListener('DOMContentLoaded', () => {
             contentWrapper.classList.add('visible');
         }, 500);
     }
+
+    // --- FORM SUBMISSION ---
+    const form = document.getElementById('waitlist-form');
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const emailInput = form.querySelector('input[type="email"]');
+        const submitBtn = form.querySelector('button');
+        const email = emailInput.value;
+
+        // Disable button during submission
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'JOINING...';
+
+        try {
+            const response = await fetch('https://script.google.com/macros/s/AKfycbype19WC1ljNdKUlUMklvACFvDqiwrGLw3rtP79-3DKzvbWAdy83IJ_VzWJF_qVVgP3dA/exec', {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email: email })
+            });
+
+            // Success feedback
+            submitBtn.textContent = 'JOINED ✓';
+            submitBtn.style.background = '#0f0';
+            submitBtn.style.color = '#000';
+            emailInput.value = '';
+
+            setTimeout(() => {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'JOIN VISION';
+                submitBtn.style.background = '#fff';
+                submitBtn.style.color = '#000';
+            }, 3000);
+
+        } catch (error) {
+            submitBtn.textContent = 'ERROR - TRY AGAIN';
+            submitBtn.disabled = false;
+            console.error('Error:', error);
+        }
+    });
 });
