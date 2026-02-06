@@ -1,0 +1,177 @@
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    /* Clean Swiss style */
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Noise Texture Overlay */
+.noise-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0.05;
+    z-index: 10;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIj48ZmlsdGVyIGlkPSJub2lzZSI+PGZlVHVyYnVsZW5jZSB0eXBlPSJmcmFjdGFsTm9pc2UiIGJhc2BGcmVxdWVuY3k9IjAuNjUiIG51bU9jdGF2ZXM9IjMiIHN0aXRjaFRpbGVzPSJzdGl0Y2giLz48L2ZpbHRlcj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWx0ZXI9InVybCgjbm9pc2UpIiBvcGFjaXR5PSIxIi8+PC9zdmc+');
+}
+
+/* Container */
+.container {
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    /* Allow full width */
+    min-height: 100vh;
+    /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Center vertically */
+    align-items: center;
+    /* Center horizontally */
+    padding: 20px;
+    z-index: 20;
+    position: relative;
+}
+
+/* Logo Animation Stage */
+.logo-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+    /* Space for content below */
+}
+
+#main-logo {
+    width: 85vw;
+    /* 85% of Viewport Width - HUGE */
+    max-width: 1200px;
+    /* Cap for ultra-wide screens */
+    height: auto;
+    opacity: 0;
+    transition: all 1s ease;
+    /* Smooth transitions */
+}
+
+/* When finished, shrink logo but keep it centered */
+.logo-container.finished #main-logo {
+    width: 400px;
+    /* Smaller but still visible */
+    max-width: 90vw;
+}
+
+/* Content Wrapper (Hidden initially) */
+.content-wrapper {
+    position: absolute;
+    bottom: 10vh;
+    /* Position near bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 600px;
+    opacity: 0;
+    transition: opacity 1.5s ease;
+    pointer-events: none;
+    /* Don't interfere during intro */
+}
+
+.content-wrapper.visible {
+    opacity: 1;
+    pointer-events: auto;
+    /* Enable interaction when visible */
+}
+
+/* Typography */
+h1 {
+    font-size: 0.8rem;
+    letter-spacing: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: #444;
+    /* Darker grey for minimal look */
+}
+
+.subtitle {
+    font-size: 0.7rem;
+    letter-spacing: 0.2rem;
+    margin-bottom: 3rem;
+    color: #888;
+}
+
+/* Form Styles */
+.waitlist-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+input[type="email"] {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #333;
+    padding: 15px;
+    width: 100%;
+    max-width: 350px;
+    color: #fff;
+    text-align: center;
+    font-family: inherit;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+    text-transform: uppercase;
+}
+
+input[type="email"]:focus {
+    border-bottom-color: #fff;
+}
+
+input[type="email"]::placeholder {
+    color: #333;
+}
+
+button {
+    background: #fff;
+    color: #000;
+    border: none;
+    padding: 12px 40px;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #000;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+/* Footer */
+.footer-text {
+    margin-top: 2rem;
+    font-size: 0.6rem;
+    color: #fff;
+    /* White for visibility */
+    letter-spacing: 0.1rem;
+}
