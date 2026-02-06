@@ -56,10 +56,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Array of textured logo paths
     const logos = [
-        '../web_assets/logo_tex_1.jpg',
-        '../web_assets/logo_tex_2.jpg',
-        '../web_assets/logo_tex_3.jpg',
-        '../web_assets/logo_tex_4.jpg'
+        'web_assets/logo_tex_1.jpg',
+        'web_assets/logo_tex_2.jpg',
+        'web_assets/logo_tex_3.jpg',
+        'web_assets/logo_tex_4.jpg'
     ];
 
     // Preload images to avoid flickering
@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function finishIntro() {
         // Reset to clean state
-        logoElement.src = '../web_assets/logo_tex_1.jpg';
+        logoElement.src = 'web_assets/logo_tex_1.jpg';
         logoElement.style.transform = 'scale(1)';
         logoElement.style.transition = 'transform 0.5s ease'; // Restore smooth movement if we add mouseover later
 
@@ -150,17 +150,13 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             // Success feedback
-            submitBtn.textContent = 'JOINED ✓';
-            submitBtn.style.background = '#0f0';
-            submitBtn.style.color = '#000';
-            emailInput.value = '';
+            form.style.display = 'none'; // Hide form
 
-            setTimeout(() => {
-                submitBtn.disabled = false;
-                submitBtn.textContent = 'JOIN VISION';
-                submitBtn.style.background = '#fff';
-                submitBtn.style.color = '#000';
-            }, 3000);
+            const confirmationMsg = document.getElementById('confirmation-msg');
+            if (confirmationMsg) {
+                confirmationMsg.textContent = "YOU'RE IN. EARLY ACCESS SECURED.";
+                confirmationMsg.style.display = 'block';
+            }
 
         } catch (error) {
             submitBtn.textContent = 'ERROR - TRY AGAIN';
